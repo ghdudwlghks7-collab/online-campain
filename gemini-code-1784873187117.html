@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세계 자살예방의 날 온라인 캠페인</title>
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --bg-color: #F1F8E9;
+            --text-color: #333333;
+        }
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 650px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(46, 125, 50, 0.15);
+        }
+        .step-page {
+            display: none;
+        }
+        .step-page.active {
+            display: block;
+        }
+        h2 {
+            font-size: 22px;
+            color: var(--primary-color);
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .desc-box {
+            background: #F4F9F4;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+        .desc-box ul {
+            padding-left: 20px;
+            margin: 10px 0 0 0;
+        }
+        .desc-box li {
+            margin-bottom: 12px;
+        }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        button {
+            flex: 1;
+            padding: 14px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button.secondary {
+            background-color: #B0BEC5;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #444;
+        }
+        input[type="text"], input[type="tel"], textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+            height: 70px;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            margin-top: 10px;
+            color: #555;
+        }
+        
+        /* 실시간 나무 영역 및 키장이모습 */
+        .tree-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(to bottom, #E8F5E9, #C8E6C9);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        .tree-graphic {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 180px;
+            line-height: 1;
+            user-select: none;
+        }
+        .kijang-character {
+            position: absolute;
+            bottom: 10px;
+            right: 25px;
+            font-size: 60px;
+            animation: bounce 2s infinite ease-in-out;
+            user-select: none;
+            z-index: 5;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .fruit-tag {
+            position: absolute;
+            background: #FFF9C4;
+            border: 1px solid #FBC02D;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #333;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            max-width: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            animation: popIn 0.4s ease-out forwards;
+            z-index: 10;
+        }
+        @keyframes popIn {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .help-banner {
+            text-align: center;
+            background: #FFEBEE;
+            border: 1px solid #FFCDD2;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            color: #C62828;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- PAGE 1 -->
+    <div class="step-page active" id="page1">
+        <h2>📅 9월 10일 세계 자살예방의 날 캠페인</h2>
+        <div class="desc-box">
+            <p><strong>세계자살예방의 날이란?</strong></p>
+            <p style="margin-top: 8px;">세계보건기구(WHO)는 생명의 소중함과 전 세계적으로 증가하는 자살문제의 심각성을 알리기 위해 2003년 9월 10일을 세계 자살 예방의 날로 제정했습니다.</p>
+            <p style="margin-top: 10px;">나와 주변의 생명을 소중히 여기고, 진심 어린 마음으로 주변을 돌아보며 모두 함께 극단적인 선택을 막기 위해 노력해야 한다고 알리는 뜻깊은 날입니다.</p>
+            <p style="margin-top: 15px; text-align: center; color: var(--primary-color); font-weight: bold;">
+                "작은 관심과 따뜻한 말이 소중한 생명을 살릴 수 있습니다."
+            </p>
+        </div>
+        <div class="btn-group">
+            <button onclick="movePage(2)">다음으로 ➔</button>
+        </div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="step-page" id="page2">
+        <h2>🔍 마음을 살피는 '보고 듣고 말하기'</h2>
+        <div class="desc-box">
+            <ul>
+                <li><strong>👀 보 기:</strong> 주변 사람들의 평소와 다른 언어적·행동적·상황적 위험 신호를 세심하게 관찰합니다.</li>
+                <li><strong>👂 듣 기:</strong> 판단하거나 비난하지 않고, 상대방의 아픈 이야기에 진심으로 귀 기울여 경청합니다.</li>
+                <li><strong>🗣️ 말하기:</strong> 안전을 직접 확인하고, 109 등 전문가의 도움을 적극적으로 권유합니다.</li>
+            </ul>
+            <p style="text-align: center; margin-top: 15px; font-size: 13px; color: #555;">
+                우리의 다정한 인사가 누군가에게는 다시 일어설 힘이 됩니다.
+            </p>
+        </div>
+        <div class="btn-group">
+            <button class="secondary" onclick="movePage(1)">이전</button>
+            <button onclick="movePage(3)">응원 남기러 가기 ➔</button>
+        </div>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="step-page" id="page3">
+        <h2>🌳 희망의 응원 나무 심기</h2>
+        
+        <div class="tree-container" id="treeContainer">
+            <div class="tree-graphic">🌳</div>
+            <div class="kijang-character" title="응원하는 키장이">🐥</div>
+        </div>
+
+        <form id="campaignForm" onsubmit="submitForm(event)">
+            <div style="display: flex; gap: 10px;">
+                <div class="form-group" style="flex: 1;">
+                    <label for="username">이름</label>
+                    <input type="text" id="username" required placeholder="이름 입력">
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label for="phone">연락처</label>
+                    <input type="tel" id="phone" required placeholder="010-0000-0000">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">응원 한마디</label>
+                <textarea id="message" required placeholder="힘든 사람에게 해주고 싶은 따뜻한 한마디를 적어주세요!"></textarea>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="privacy" required>
+                <label for="privacy" style="display:inline; font-weight:normal; margin:0;">[필수] 개인정보 수집 및 이용에 동의합니다 (경품 추첨용)</label>
+            </div>
+
+            <div class="btn-group" style="margin-top: 15px;">
+                <button class="secondary" type="button" onclick="movePage(2)">이전</button>
+                <button type="submit" id="submitBtn">응원 남기고 나무에 걸기 ✨</button>
+            </div>
+        </form>
+
+        <div class="help-banner">
+            🚨 위로가 필요할 땐 언제나 <strong>자살예방 상담전화 109</strong> (24시간 운영)
+        </div>
+    </div>
+</div>
+
+<script>
+    function movePage(pageNum) {
+        document.querySelectorAll('.step-page').forEach(page => {
+            page.classList.remove('active');
+        });
+        document.getElementById('page' + pageNum).classList.add('active');
+    }
+
+    window.onload = function() {
+        const defaults = ["힘내세요!", "함께할게요 💙", "오늘도 수고했어요"];
+        defaults.forEach((text, i) => {
+            setTimeout(() => createTag(text), i * 300);
+        });
+    };
+
+    function submitForm(event) {
+        event.preventDefault();
+        
+        const username = document.getElementById('username').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+        const submitBtn = document.getElementById('submitBtn');
+
+        submitBtn.innerText = "등록 중...";
+        submitBtn.disabled = true;
+
+        // 발급받으신 웹 앱 주소가 이미 쏙 들어가 있습니다!
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbypS0ulbiHfR5DZlousmGU8qWf-_PefXH3Kg2XM0TnU1eEOKPQTqc5V9f9dRmYaSxe6/exec";
+
+        const urlParams = new URLSearchParams({
+            username: username,
+            phone: phone,
+            message: message
+        });
+
+        fetch(SCRIPT_URL + "?" + urlParams.toString(), {
+            method: 'GET'
+        })
+        .then(response => response.text())
+        .then(() => {
+            createTag(message);
+            alert("응원이 성공적으로 등록되어 나무에 걸렸습니다! 감사합니다.");
+            
+            document.getElementById('campaignForm').reset();
+            submitBtn.innerText = "응원 남기고 나무에 걸기 ✨";
+            submitBtn.disabled = false;
+        })
+        .catch(error => {
+            console.error('Error!', error);
+            alert("전송 중 오류가 발생했습니다. 다시 시도해 주세요.");
+            submitBtn.innerText = "응원 남기고 나무에 걸기 ✨";
+            submitBtn.disabled = false;
+        });
+    }
+
+    function createTag(text) {
+        const container = document.getElementById('treeContainer');
+        const tag = document.createElement('div');
+        tag.className = 'fruit-tag';
+        tag.innerText = text;
+
+        const rx = Math.floor(Math.random() * 65) + 18;
+        const ry = Math.floor(Math.random() * 45) + 35;
+
+        tag.style.left = rx + '%';
+        tag.style.bottom = ry + '%';
+
+        container.appendChild(tag);
+    }
+</script>
+
+</body>
+</html>
